@@ -1,0 +1,19 @@
+# 阶段 1：Builder 构建依赖
+FROM python:3.11-slim as builder
+WORKDIR /build
+# 复制依赖清单，利用 Docker 层缓存
+COPY app/requirements.txt .
+# 安装依赖到用户目录，避免权限问题
+RUN pip install --user --no-cache-dir -r requirements.txt
+
+# 阶段 2：Runtime 运行时（最小化镜像）
+FROM python:3.11-slim
+WORKDIR /app
+# 从 builder 阶段复制已安装的依赖
+COPY --from=builder /root/.local /root/.local
+# 复制应用代码
+COPY app/ .
+# 添加依赖路径到系统环境变量
+ENV PATH=/root/.local/bin:$PATH
+# 启动应用
+CMD ["python", "app.py"]
