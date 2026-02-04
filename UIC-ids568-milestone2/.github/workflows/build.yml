@@ -39,4 +39,4 @@ jobs:
         with:
           context: ./module3/milestone2
           push: true
-          tags: registry.example.com/[你的用户名]/ml-service:${{ github.ref_name }}
+          tags: registry.example.com/jane872/ml-service:${{ github.ref_name }}
