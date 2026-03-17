@@ -1,0 +1,26 @@
+2026-03-16 22:18:51,754 - DistributedFeatureEngineering-Milestone4 - INFO - === Starting Distributed Feature Engineering Pipeline ===
+2026-03-16 22:18:51,754 - DistributedFeatureEngineering-Milestone4 - INFO - Spark Session - LOCAL MODE (1 core, baseline)
+2026-03-16 22:18:55,600 - DistributedFeatureEngineering-Milestone4 - INFO - Loaded data | Path: ./synthetic_data | Rows: 10,000,000 | Partitions: 3
+2026-03-16 22:18:55,600 - DistributedFeatureEngineering-Milestone4 - INFO - Starting data cleaning...
+2026-03-16 22:19:04,328 - DistributedFeatureEngineering-Milestone4 - INFO - Cleaning completed | Remaining: 9,978,201 | Removed: 21,799 (0.22%)
+2026-03-16 22:19:04,329 - DistributedFeatureEngineering-Milestone4 - INFO - Starting distributed feature engineering...
+2026-03-16 22:21:07,916 - DistributedFeatureEngineering-Milestone4 - INFO - Feature engineering completed | Features: 18 | Rows: 9,978,201
+2026-03-16 22:23:19,740 - DistributedFeatureEngineering-Milestone4 - INFO - Features saved | Path: ./feature_output_local | Partitions: 1
+2026-03-16 22:24:51,382 - DistributedFeatureEngineering-Milestone4 - INFO - Metrics collected | {
+  "execution_mode": "local",
+  "n_workers": 1,
+  "total_runtime_seconds": 266.43,
+  "total_rows_processed": 9978201,
+  "total_partitions": 1,
+  "shuffle_partitions": "200",
+  "executor_memory": "4g",
+  "driver_memory": "4g",
+  "throughput_rows_per_second": 37451.49,
+  "shuffle_volume_mb": 0.0,
+  "execution_datetime": "2026-03-16 22:24:51"
+}
+2026-03-16 22:24:51,384 - DistributedFeatureEngineering-Milestone4 - INFO - Metrics saved | Path: ./metrics_local.json
+2026-03-16 22:24:51,384 - DistributedFeatureEngineering-Milestone4 - INFO - === Pipeline Completed Successfully ===
+2026-03-16 22:24:51,384 - DistributedFeatureEngineering-Milestone4 - INFO - Runtime: 266.43s | Throughput: 37451.49 rows/s
+2026-03-16 22:24:51,997 - DistributedFeatureEngineering-Milestone4 - INFO - Spark Session Closed
+2026-03-16 22:24:51,999 - py4j.clientserver - INFO - Closing down clientserver connection

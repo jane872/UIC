@@ -1,0 +1,14 @@
+{
+    "execution_mode": "distributed",
+    "n_workers": 4,
+    "total_runtime_seconds": 264.91,
+    "total_rows_processed": 9978201,
+    "total_partitions": 8,
+    "shuffle_partitions": "8",
+    "partition_key": "user_id",
+    "executor_memory": "4g",
+    "driver_memory": "4g",
+    "throughput_rows_per_second": 37666.38,
+    "shuffle_volume_mb": "See Spark UI (Shuffle Partitions: 8)",
+    "execution_datetime": "2026-03-16 22:32:11"
+}

@@ -1,0 +1,13 @@
+{
+    "execution_mode": "local",
+    "n_workers": 1,
+    "total_runtime_seconds": 266.43,
+    "total_rows_processed": 9978201,
+    "total_partitions": 1,
+    "shuffle_partitions": "200",
+    "executor_memory": "4g",
+    "driver_memory": "4g",
+    "throughput_rows_per_second": 37451.49,
+    "shuffle_volume_mb": 0.0,
+    "execution_datetime": "2026-03-16 22:24:51"
+}

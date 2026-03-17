@@ -1,0 +1,27 @@
+2026-03-16 22:33:00,130 - DistributedFeatureEngineering-Milestone4 - INFO - === Starting Distributed Feature Engineering Pipeline ===
+2026-03-16 22:33:00,130 - DistributedFeatureEngineering-Milestone4 - INFO - Spark Session - DISTRIBUTED MODE (8 workers)
+2026-03-16 22:33:07,187 - DistributedFeatureEngineering-Milestone4 - INFO - Loaded & Repartitioned Data | Path: ./synthetic_data | Rows: 10,000,000 | Partitions: 8 | Partition Key: user_id
+2026-03-16 22:33:07,188 - DistributedFeatureEngineering-Milestone4 - INFO - Starting data cleaning...
+2026-03-16 22:33:10,187 - DistributedFeatureEngineering-Milestone4 - INFO - Cleaning completed | Remaining: 9,978,201 | Removed: 21,799 (0.22%)
+2026-03-16 22:33:10,187 - DistributedFeatureEngineering-Milestone4 - INFO - Starting distributed feature engineering...
+2026-03-16 22:36:07,474 - DistributedFeatureEngineering-Milestone4 - INFO - Feature engineering completed | Features: 18 | Rows: 9,978,201 | Output Partitions: 8
+2026-03-16 22:37:37,659 - DistributedFeatureEngineering-Milestone4 - INFO - Features saved | Path: ./feature_output_dist8 | Partitions: 8
+2026-03-16 22:38:57,013 - DistributedFeatureEngineering-Milestone4 - INFO - Metrics collected | {
+  "execution_mode": "distributed",
+  "n_workers": 8,
+  "total_runtime_seconds": 275.56,
+  "total_rows_processed": 9978201,
+  "total_partitions": 8,
+  "shuffle_partitions": "16",
+  "partition_key": "user_id",
+  "executor_memory": "4g",
+  "driver_memory": "4g",
+  "throughput_rows_per_second": 36210.63,
+  "shuffle_volume_mb": "See Spark UI (Shuffle Partitions: 16)",
+  "execution_datetime": "2026-03-16 22:38:57"
+}
+2026-03-16 22:38:57,015 - DistributedFeatureEngineering-Milestone4 - INFO - Metrics saved | Path: ./metrics_dist8.json
+2026-03-16 22:38:57,015 - DistributedFeatureEngineering-Milestone4 - INFO - === Pipeline Completed Successfully ===
+2026-03-16 22:38:57,015 - DistributedFeatureEngineering-Milestone4 - INFO - Runtime: 275.56s | Throughput: 36210.63 rows/s
+2026-03-16 22:38:57,469 - DistributedFeatureEngineering-Milestone4 - INFO - Spark Session Closed
+2026-03-16 22:38:57,471 - py4j.clientserver - INFO - Closing down clientserver connection
